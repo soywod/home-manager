@@ -1,0 +1,60 @@
+[accounts.calendars.caldav]
+server = "https://dav.example.com/calendars/"
+
+[accounts.calendars.calendar]
+merger = "my-tcal {base} {local} {remote} --output {output}"
+
+[accounts.hm-account.imap]
+server = "imap.example.org:1993"
+starttls = false
+
+[accounts.hm-account.imap.sasl.plain]
+username = "home.manager.jr"
+
+[accounts.hm-account.imap.sasl.plain.password]
+command = "password-command 2"
+
+[accounts.hm-account.mail.filter]
+since = "30d"
+
+[accounts.hm-account.smtp]
+server = "smtp://smtp.example.org"
+starttls = true
+
+[accounts.hm-account.smtp.sasl.plain]
+username = "home.manager.jr"
+
+[accounts.hm-account.smtp.sasl.plain.password]
+command = "password-command 2"
+
+[accounts."hm@example.com".carddav]
+server = "https://dav.example.com/"
+
+[accounts."hm@example.com".carddav.auth.basic]
+username = "home.manager"
+
+[accounts."hm@example.com".carddav.auth.basic.password]
+command = ["pass", "show", "carddav"]
+
+[accounts."hm@example.com".imap]
+server = "imaps://imap.example.com:993"
+starttls = false
+
+[accounts."hm@example.com".imap.sasl.login]
+username = "home.manager"
+
+[accounts."hm@example.com".imap.sasl.login.password]
+command = "password-command"
+
+[accounts."hm@example.com".smtp]
+server = "smtps://smtp.example.com"
+starttls = false
+
+[accounts."hm@example.com".smtp.sasl.xoauth2]
+username = "home.manager"
+
+[accounts."hm@example.com".smtp.sasl.xoauth2.token]
+command = "password-command"
+
+[contact]
+merger = "tcard merge {base} {local} {remote} --output {output}"

@@ -64,6 +64,7 @@
             "mu"
             "mujmap"
             "neomutt"
+            "neverest"
             "notmuch"
             "offlineimap"
             "thunderbird"
