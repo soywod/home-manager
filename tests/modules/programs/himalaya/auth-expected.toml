@@ -1,5 +1,7 @@
 [accounts.anon-account]
 default = false
+display-name = "Anon Test"
+email = "anon@example.com"
 
 [accounts.anon-account.imap]
 server = "imaps://imap.example.com"
@@ -15,6 +17,8 @@ trash = "Trash"
 
 [accounts."hm@example.com"]
 default = true
+display-name = "H. M. Test"
+email = "hm@example.com"
 
 [accounts."hm@example.com".imap]
 server = "imaps://imap.example.com"
@@ -44,6 +48,8 @@ command = "password-command"
 
 [accounts.jmap-account]
 default = false
+display-name = "JMAP Test"
+email = "jmap@example.com"
 
 [accounts.jmap-account.jmap]
 server = "jmap.example.com"

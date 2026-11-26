@@ -108,6 +108,8 @@ let
 
       globalConfig = {
         default = account.primary;
+        email = account.address;
+        display-name = account.realName;
         mailbox.alias = compactAttrs {
           inherit (account.folders) inbox;
           inherit (account.folders) sent;
@@ -169,7 +171,9 @@ in
         type = types.submodule { freeformType = tomlFormat.type; };
         default = { };
         description = ''
-          Himalaya CLI global configuration.
+          Himalaya CLI global configuration, written at the top level of
+          {file}`$XDG_CONFIG_HOME/himalaya/config.toml` beside the accounts.
+          Himalaya refuses a key it does not know, naming it and its line.
           See <https://github.com/pimalaya/himalaya/blob/master/config.sample.toml> for supported values.
         '';
       };

@@ -1,5 +1,7 @@
 [accounts.hm-account]
 default = false
+display-name = "H. M. Test Jr."
+email = "hm@example.org"
 
 [accounts.hm-account.imap]
 server = "imaps://imap.example.org"
@@ -29,6 +31,8 @@ command = "password-command 2"
 
 [accounts."maildir@example.com"]
 default = false
+display-name = "Maildir Test"
+email = "maildir@example.com"
 
 [accounts."maildir@example.com".mailbox.alias]
 drafts = "Drafts"

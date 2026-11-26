@@ -14,7 +14,8 @@ in
       type = types.submodule { freeformType = tomlFormat.type; };
       default = { };
       description = ''
-        Himalaya CLI configuration for this email account.
+        Himalaya CLI configuration for this email account, merged over the
+        one the module derives from the account.
         See <https://github.com/pimalaya/himalaya/blob/master/config.sample.toml> for supported values.
       '';
     };

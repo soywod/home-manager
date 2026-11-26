@@ -1,5 +1,7 @@
 [accounts."hm@example.com"]
 default = true
+display-name = "H. M. Test"
+email = "hm@example.com"
 
 [accounts."hm@example.com".imap]
 server = "imaps://imap.example.com:993"
