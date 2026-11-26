@@ -1,0 +1,5 @@
+[accounts.personal]
+default = true
+
+[accounts.personal.caldav]
+server = "https://dav.example.com/calendars/"

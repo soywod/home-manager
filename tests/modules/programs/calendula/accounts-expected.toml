@@ -1,0 +1,23 @@
+[accounts.personal]
+default = true
+
+[accounts.personal.caldav]
+server = "https://dav.example.com/calendars/"
+
+[accounts.personal.caldav.auth.basic]
+username = "home.manager"
+
+[accounts.personal.caldav.auth.basic.password]
+command = ["pass", "show", "caldav"]
+
+[accounts.personal.calendar]
+default = "work"
+
+[accounts.personal.event]
+composer = ["tcal", "edit"]
+
+[accounts.synced.vdir]
+root = "/home/hm-user/calendars/synced"
+
+[event.list]
+page-size = 50
