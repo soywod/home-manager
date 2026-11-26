@@ -53,6 +53,7 @@
             "aerc"
             "alot"
             "astroid"
+            "carillon"
             "getmail"
             "himalaya"
             "imapnotify"

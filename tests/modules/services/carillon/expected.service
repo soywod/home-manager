@@ -1,0 +1,11 @@
+[Install]
+WantedBy=default.target
+
+[Service]
+ExecStart=@carillon@/bin/carillon watch
+Restart=on-failure
+RestartSec=10
+
+[Unit]
+Description=Carillon PIM watcher
+X-Restart-Triggers=/nix/store/00000000000000000000000000000000-carillon-config.toml

@@ -1,0 +1,41 @@
+[accounts.hm-account.imap]
+mailbox = "Archive"
+server = "imaps://imap.example.org"
+starttls = false
+
+[accounts.hm-account.imap.hooks.on-message-add]
+command = "true"
+
+[accounts.hm-account.imap.sasl.plain]
+username = "home.manager.jr"
+
+[accounts.hm-account.imap.sasl.plain.password]
+command = "password-command 2"
+
+[accounts.hm-account.imap.watch.poll]
+interval = "5m"
+
+[accounts."hm@example.com"]
+default = true
+
+[accounts."hm@example.com".imap]
+mailbox = "Inbox"
+server = "imaps://imap.example.com:993"
+starttls = false
+
+[accounts."hm@example.com".imap.hooks.on-message-add.notify]
+body = "$subject"
+summary = "New mail from $sender"
+
+[accounts."hm@example.com".imap.sasl.xoauth2]
+username = "home.manager"
+
+[accounts."hm@example.com".imap.sasl.xoauth2.token]
+command = "password-command"
+
+[accounts.local.maildir]
+mailbox = "INBOX"
+root = "~/Mail/local"
+
+[accounts.local.maildir.hooks.on-flag-add]
+command = "true"
