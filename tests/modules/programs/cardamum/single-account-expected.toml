@@ -1,0 +1,5 @@
+[accounts.personal]
+default = true
+
+[accounts.personal.carddav]
+server = "https://dav.example.com/"

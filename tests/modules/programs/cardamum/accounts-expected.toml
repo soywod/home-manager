@@ -1,0 +1,20 @@
+[accounts.personal]
+default = true
+
+[accounts.personal.addressbook]
+default = "contacts"
+
+[accounts.personal.carddav]
+server = "https://dav.example.com/"
+
+[accounts.personal.carddav.auth.basic]
+username = "home.manager"
+
+[accounts.personal.carddav.auth.basic.password]
+command = ["pass", "show", "carddav"]
+
+[accounts.synced.vdir]
+root = "/home/hm-user/contacts/synced"
+
+[card.list]
+page-size = 50
